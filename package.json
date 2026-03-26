@@ -1,0 +1,53 @@
+{
+  "name": "velkaris-core",
+  "version": "1.0.0",
+  "description": "Core backend domain layer for Velkaris on-chain AI marketplace",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --fix",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "test:ui": "vitest --ui",
+    "db:generate": "drizzle-kit generate:postgres",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "db:seed": "tsx scripts/seed.ts",
+    "db:studio": "drizzle-kit studio"
+  },
+  "keywords": [
+    "marketplace",
+    "ai",
+    "blockchain",
+    "ethereum",
+    "base"
+  ],
+  "author": "Velkaris Team",
+  "license": "MIT",
+  "dependencies": {
+    "zod": "^3.22.4",
+    "viem": "^2.13.0",
+    "postgres": "^3.4.3",
+    "drizzle-orm": "^0.30.3",
+    "dotenv": "^16.4.5",
+    "winston": "^3.13.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/uuid": "^9.0.7",
+    "typescript": "^5.3.3",
+    "tsx": "^4.7.0",
+    "drizzle-kit": "^0.20.14",
+    "vitest": "^1.1.0",
+    "eslint": "^8.56.0",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
